@@ -48,7 +48,7 @@ class Solution {
 }*/
 
 
-
+/*
 
 
 class Solution {
@@ -82,8 +82,8 @@ class Solution {
 
         return true;
     }
-}
-/*Using Stack:
+}*/
+/*Using Stack:*/
 
 class Solution {
     public boolean isPalindrome(ListNode head) {
@@ -108,4 +108,4 @@ class Solution {
         }
         return true;
     }
-}*/
+}
