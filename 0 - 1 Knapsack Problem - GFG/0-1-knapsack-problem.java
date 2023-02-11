@@ -45,25 +45,22 @@ class gfg
 
 // } Driver Code Ends
 
-/*
+
 class Solution 
 { 
     //Function to return max value that can be put in knapsack of capacity W.
     static int dp[][] = new int [1001][1001];
- /*   for(int i=0;i<1001;i++){
-        for(int j=0;j<1001;j++){
-            dp[i][j]=-1;
-        }
-    }*//*
+    
     static int knapSack(int W, int wt[], int val[], int n) 
     {
-          for(int i=0;i<1001;i++){
-        for(int j=0;j<1001;j++){
-            dp[i][j]=-1;
-        }
-    }
+          for(int [] a :dp){
+              Arrays.fill(a,-1);
+          }
+        return knapSackhelp(W,wt,val,n);
         
+    }
         // base condition 
+        static int knapSackhelp(int W,int [] wt , int [] val , int n ){
          if(n==0 || W==0){
              return 0;
          }
@@ -72,18 +69,18 @@ class Solution
          }
          //choice
          if(W>=wt[n-1]){
-             return dp[n][W]=Math.max(val[n-1]+knapSack(W-wt[n-1],wt,val,n-1),knapSack(W,wt,val,n-1));
+             return dp[n][W]=Math.max(val[n-1]+knapSackhelp(W-wt[n-1],wt,val,n-1),knapSackhelp(W,wt,val,n-1));
          }
          else{
-             return dp[n][W]=knapSack(W,wt,val,n-1);
+             return dp[n][W]=knapSackhelp(W,wt,val,n-1);
          }
     } 
 }
 
 
 
-*/
 
+/*
 
 class Solution 
 
@@ -145,4 +142,4 @@ class Solution
 
     }
 
-}
+}*/
