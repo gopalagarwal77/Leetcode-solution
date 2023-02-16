@@ -97,7 +97,7 @@ class GFG {
 
 
 // User function Template for Java
-/*
+
 class Solution {
     // Function to insert a node in a BST.
     Node insert(Node root, int Key) {
@@ -105,20 +105,24 @@ class Solution {
             return new Node(Key);
           
         }
+        if(root.data==Key){
+            return root;
+        }
         else{
             if(root.data>Key){
                 root.left=insert(root.left,Key);
             }
             else{
-                root.right=insert(root.right,Key);            }
+                root.right=insert(root.right,Key);            
+                
+            }
         }
         return root;
     }
 }
 
 
-*/
-
+/*
 class Solution {
 
     // Function to insert a node in a BST.
@@ -169,4 +173,4 @@ class Solution {
 
     }
 
-}
+}*/
